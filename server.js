@@ -16,7 +16,9 @@ let salasDeAula = [
 let proximoId = 5;
 
 app.get('/', (req, res) => {
-    res.status(200).send('<h1>API de Salas de Aula está funcionando!</h1><p>Acesse /salasdeaula para ver os dados.</p>');
+    res.status(200).send('<h1>API de Salas de Aula está funcionando!</h1><p>Acesse /salasdeaula para ver os dados.</p>'
+    +'<p>Acesse /salasdeaula/:id para achar um específico </p><p>Acesse /salasdeaula com post para adicionar os dados.</p>'
+    + '<p>Acesse /salasdeaula/:id com delete para deletar os dados.</p>');
 });
 
 app.get('/salasdeaula', (req, res) => {
